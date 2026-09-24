@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --fundo: #f4f7f8;
+  --cartao: #ffffff;
+  --texto: #14262b;
+  --suave: #5d7178;
+  --linha: #dbe4e7;
+  --marca: #052b59;
+  --fonte: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte);
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.45;
+}
+
+.caixa {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+header {
+  padding: 8px 0 16px;
+}
+
+.logotipo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+
+.logotipo img {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+}
+
+.subtitulo {
+  color: var(--suave);
+  font-size: 0.9rem;
+  margin: 0 0 16px;
+}
+
+.estatisticas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.estatistica-item {
+  background: var(--cartao);
+  border: 1px solid var(--linha);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.estatistica-item b {
+  display: block;
+  font-size: 1.9rem;
+}
+
+.estatistica-item small {
+  color: var(--suave);
+}
+
+.ferramentas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+input, button {
+  font: inherit;
+  color: var(--texto);
+}
+
+input {
+  background: var(--cartao);
+  border: 1px solid var(--linha);
+  border-radius: 8px;
+  padding: 9px 12px;
+}
+
+#busca {
+  flex: 1 1 180px;
+}
+
+button {
+  cursor: pointer;
+  background: var(--cartao);
+  border: 1px solid var(--linha);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+button:hover {
+  border-color: var(--marca);
+}
+
+button.ativo {
+  background: var(--marca);
+  border-color: var(--marca);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 12px;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin: 28px 0 10px;
+}
+
+#historico {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: var(--cartao);
+  border: 1px solid var(--linha);
+  border-radius: 12px;
+  max-height: 240px;
+  overflow-y: auto;
+}

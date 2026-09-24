@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>KeyControl — DISCIPLINA A</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/icon.png' %}" type="image/x-icon">
+    <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+
+<body>
+<div class="caixa">
+    <header>
+        <div class="logotipo"><img src="{% static 'img/icon.png' %}" alt="Ícone KeyControl">KeyControl<br>Disciplina A</div>
+    </header>
+    
+    <p class="subtitulo">Controle em tempo real de salas abertas, fechadas e da posse das chaves.</p>
+
+    <section class="estatisticas" aria-label="Resumo">
+        <div class="estatistica-item"><b id="sAb">0</b><small>Salas abertas</small></div>
+        <div class="estatistica-item"><b id="sFe">0</b><small>Salas fechadas</small></div>
+        <div class="estatistica-item"><b id="sCh">0</b><small>Chaves emprestadas</small></div>
+        <div class="estatistica-item"><b id="sTo">0</b><small>Total de salas</small></div>
+    </section>
+
+    <div class="ferramentas">
+        <input id="busca" type="search" placeholder="Buscar sala, andar ou responsável…">
+        <button data-f="todas" class="ativo">Todas</button>
+        <button data-f="abertas">Abertas</button>
+        <button data-f="fechadas">Fechadas</button>
+        <button data-f="fora">Chave fora</button>
+    </div>
+
+    <div class="grade" id="grid"></div>
+
+    <h2>Histórico de atividades</h2>
+    <ul id="historico"></ul>
+
+</div>
+</body>
+
+</html>
