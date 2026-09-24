@@ -13,7 +13,7 @@ ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
 
 
 CSRF_TRUSTED_ORIGINS = [
-    os.getenv('ALLOWED_HOSTS', '').split(','),
+    'https://keycontrol.onrender.com',
 ]
 
 
