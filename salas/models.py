@@ -1,6 +1,6 @@
 from django.db import models
 
-class Sala(models.Model):
+class Salas(models.Model):
     numero = models.CharField(max_length=20, verbose_name="Número/Nome")
     status = models.BooleanField(default=False, verbose_name="Status da Sala")
 
