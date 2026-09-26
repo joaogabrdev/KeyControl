@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>KeyControl — Disciplina A</title>
+    <title>MainControl — Disciplina A</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="shortcut icon" href="{% static 'img/icon.png' %}" type="image/x-icon">
     <script src="{% static 'js/script.js' %}" defer></script>
@@ -15,7 +15,7 @@
 <body>
 <div class="caixa">
     <header>
-        <div class="logotipo"><img src="{% static 'img/icon.png' %}" alt="Ícone KeyControl">KeyControl<br>Disciplina A</div>
+        <div class="logotipo"><img src="{% static 'img/icon.png' %}" alt="Ícone MainControl">MainControl<br>Disciplina A</div>
     </header>
     
     <p class="subtitulo">Controle em tempo real de salas abertas, fechadas e da posse das chaves.</p>
@@ -24,7 +24,7 @@
         <div class="estatistica-item"><b id="sAb">0</b><small>Salas abertas</small></div>
         <div class="estatistica-item"><b id="sFe">0</b><small>Salas fechadas</small></div>
         <div class="estatistica-item"><b id="sCh">0</b><small>Chaves emprestadas</small></div>
-        <div class="estatistica-item"><b id="sTo">0</b><small>Total de salas</small></div>
+        <div class="estatistica-item"><b id="sTo">6</b><small>Total de salas</small></div>
     </section>
 
     <div class="ferramentas">
@@ -36,12 +36,12 @@
     </div>
 
     <div class="grade" id="grid">
-        <button id="botão-1">SALA 1</button>
-        <button id="botão-2">SALA 2</button>
-        <button id="botão-3">SALA 3</button>
-        <button id="botão-4">SALA 4</button>
-        <button id="botão-5">SALA 5</button>
-        <button id="botão-6">SALA 6</button>
+        <button id="botão-1" onclick="alternarStatusSala(1, '#aviso-sala-01')">SALA 1 <br><p id="aviso-sala-01"></p></button>
+        <button id="botão-2" onclick="alternarStatusSala(2, '#aviso-sala-02')">SALA 2 <br><p id="aviso-sala-02"></p></button>
+        <button id="botão-3" onclick="alternarStatusSala(3, '#aviso-sala-03')">SALA 3 <br><p id="aviso-sala-03"></p></button>
+        <button id="botão-4" onclick="alternarStatusSala(4, '#aviso-sala-04')">SALA 4 <br><p id="aviso-sala-04"></p></button>
+        <button id="botão-5" onclick="alternarStatusSala(5, '#aviso-sala-05')">SALA 5 <br><p id="aviso-sala-05"></p></button>
+        <button id="botão-6" onclick="alternarStatusSala(6, '#aviso-sala-06')">SALA 6 <br><p id="aviso-sala-06"></p></button>
     </div>
 
     <h2>Histórico de atividades</h2>
